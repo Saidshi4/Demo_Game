@@ -10,6 +10,8 @@ import entities.Game;
 public class Main {
     public static void main(String[] args) throws Exception {
         Customer customer = new Customer(1, "Said", "Gulizada", 2004, 123456);
+        Customer customer2 = new Customer(1, "Said", "Gulizada", 2006, 123456);
+
         Game game = new Game(123, "LOL", 22.5);
         Campaign campaign = new Campaign("Ramazan holiday", 45.0);
 
@@ -21,9 +23,12 @@ public class Main {
 
         customerManager.register(customer);
         System.out.println("--------------------------");
+
         campaignManager.add(campaign);
         System.out.println("--------------------------");
         gameManager.buy(customer,game,campaign);
 
+        customerManager.register(customer2);
+        System.out.println("--------------------------");
     }
 }
